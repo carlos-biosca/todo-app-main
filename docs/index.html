@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png"><link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Frontend Mentor | Todo app</title>
+  </head>
+  <body> 
+    <header class="header" id="header">
+      <h1 class="title">TODO</h1><img src="assets/icons/icon-sun.svg" alt="theme" id="toggle-icon">
+    </header>
+    <main class="main" id="main"> 
+      <form class="form" id="new-todo-form">
+        <div class="form__field">
+          <input class="form__input form__input--checkbox" type="checkbox" name="todoCompleted" id="new-todo-checkbox">
+          <label class="form__label" for="new-todo-checkbox"></label>
+          <input class="form__input" type="text" name="todoValue" placeholder="Create a new todo...">
+        </div>
+      </form>
+      <form class="form form--todos" id="todo-list-form">
+        <ul class="todo-list" id="todo-list"></ul>
+      </form>
+      <div class="filter" id="filter">
+        <p class="filter__remaining" id="filter-remaining"> </p>
+        <button class="filter__remove" id="filter-remove">Clear Completed</button>
+        <ul class="filter__list" id="filter-list">
+          <li class="filter__item">
+            <button class="filter__button filter__button--active">All</button>
+          </li>
+          <li class="filter__item">
+            <button class="filter__button" value="active">Active </button>
+          </li>
+          <li class="filter__item">
+            <button class="filter__button" value="completed">Completed</button>
+          </li>
+        </ul>
+      </div>
+      <p class="dragging-info">Drag and drop to reorder list</p>
+      <p class="attribution">Challenge by<a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/0biguan">0biguan</a>.</p>
+    </main>
+    <div class="toast" id="toast"> </div>
+    <script src="./js/scripts-dist.js"> </script>
+  </body>
+</html>

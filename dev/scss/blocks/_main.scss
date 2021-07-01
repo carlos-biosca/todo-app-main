@@ -1,0 +1,12 @@
+.main {
+  position: relative;
+  top: -92px;
+  padding: 0 24px;
+
+  @include desktop {
+    top: -142px;
+    width: 590px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

@@ -1,0 +1,67 @@
+body.light-mode {
+  background-color: var(--background-light);
+
+  & .header {
+    background-image: var(--background-mobile-light);
+
+    @include desktop {
+      background-image: var(--background-desktop-light);
+    }
+  }
+
+  & .form {
+    background-color: var(--VeryLightGray);
+
+    &__label {
+      border: 1px solid var(--background-light);
+    }
+
+    &__input {
+      color: hsl(240, 6%, 33%);
+
+      &::placeholder {
+        color: var(--DarkGrayishBlue);
+      }
+    }
+
+    &--todos {
+      box-shadow: 0px 70px 35px 1px rgba(0, 0, 0, 0.05);
+
+      & .form__field {
+        border-bottom: 1px solid var(--background-light);
+      }
+
+      & .form__input--checkbox:checked + label + input {
+        color: var(--LightGrayishBlue);
+      }
+    }
+  }
+
+  & .filter {
+    background-color: var(--VeryLightGray);
+
+    &__list {
+      background-color: var(--VeryLightGray);
+    }
+
+    &__remaining {
+      color: var(--DarkGrayishBlue);
+    }
+
+    &__remove {
+      color: var(--DarkGrayishBlue);
+    }
+
+    &__button {
+      color: var(--DarkGrayishBlue);
+
+      &--active {
+        color: var(--light-blue);
+      }
+    }
+  }
+
+  & .info {
+    color: var(--DarkGrayishBlue);
+  }
+}

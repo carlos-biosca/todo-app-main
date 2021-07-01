@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #333;
+}
+
+body {
+  position: relative;
+  font-family: "Josefin Sans", sans-serif;
+  min-height: 100vh;
+  background-color: var(--background);
+  color: var(--VeryLightGray);
+  margin: 0 auto;
+  max-width: 375px;
+
+  @include desktop {
+    max-width: 1440px;
+  }
+}
+
+ul {
+  @include reset-list;
+}
+
+.attribution {
+  text-align: center;
+  font-size: 11px;
+  margin-top: 50px;
+  color: var(--completed-todo);
+
+  & a {
+    color: hsl(228, 45%, 44%);
+  }
+}

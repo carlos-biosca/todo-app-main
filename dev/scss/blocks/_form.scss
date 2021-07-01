@@ -1,0 +1,109 @@
+.form {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 16px;
+  background-color: var(--todo-background);
+  border-radius: 5px;
+
+  &__field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem 1rem;
+  }
+
+  &__label {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid var(--border);
+    @include laptop {
+      cursor: pointer;
+    }
+
+    &::after {
+      content: url("../assets/icons/icon-check.svg");
+      position: absolute;
+      top: 3px;
+      left: 5px;
+      transform: scale(0);
+    }
+  }
+
+  &__input {
+    flex-grow: 1;
+    height: 48px;
+    color: var(--uncompleted-todo);
+    background: none;
+    outline: none;
+    border: none;
+    text-indent: 12px;
+    font-size: 12px;
+    font-family: inherit;
+
+    &--checkbox {
+      display: none;
+
+      &:checked + label {
+        background-image: var(--gradient);
+        border: transparent;
+
+        &::after {
+          transform: scale(1);
+        }
+      }
+    }
+
+    &::placeholder {
+      color: var(--on-background);
+    }
+  }
+
+  &__button {
+    background: none;
+    border: none;
+
+    & img {
+      width: 12px;
+      pointer-events: none;
+    }
+
+    @include desktop {
+      opacity: 0;
+      transform: scale(0);
+    }
+  }
+
+  &--todos {
+    margin-bottom: 0px;
+    border-radius: 5px 5px 0px 0px;
+    overflow: hidden;
+    box-shadow: 0px 70px 35px 1px rgba(0, 0, 0, 0.5);
+
+    & .form__field {
+      border-radius: 0;
+      border-bottom: 1px solid var(--border);
+
+      &:hover .form__button {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    & .form__input {
+      @include laptop {
+        &:enabled {
+          cursor: pointer;
+        }
+      }
+
+      &--checkbox:checked + label + input {
+        color: var(--completed-todo);
+        text-decoration: line-through;
+      }
+    }
+  }
+}

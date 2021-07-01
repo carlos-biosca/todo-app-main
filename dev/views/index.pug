@@ -1,0 +1,43 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicon-32x32.png"
+    )
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    link(rel="stylesheet", href="css/styles.css")
+    title Frontend Mentor | Todo app
+  body 
+    header#header.header
+      h1.title TODO
+      img(src="assets/icons/icon-sun.svg", alt="theme")#toggle-icon
+    main#main.main 
+      form#new-todo-form.form
+        .form__field
+          input(type="checkbox" name="todoCompleted")#new-todo-checkbox.form__input.form__input--checkbox 
+          label(for="new-todo-checkbox").form__label
+          input(type="text" name="todoValue" placeholder="Create a new todo...").form__input 
+      form#todo-list-form.form.form--todos
+        ul#todo-list.todo-list
+      #filter.filter
+        p#filter-remaining.filter__remaining 
+        button#filter-remove.filter__remove Clear Completed
+        ul#filter-list.filter__list
+          li.filter__item: button.filter__button.filter__button--active All
+          li.filter__item: button(value="active").filter__button Active 
+          li.filter__item: button(value="completed").filter__button Completed
+      p.dragging-info Drag and drop to reorder list
+      p.attribution
+        | Challenge by
+        a(href='https://www.frontendmentor.io?ref=challenge' target='_blank') Frontend Mentor
+        | . Coded by 
+        a(href='https://github.com/0biguan') 0biguan
+        | .
+    #toast.toast 
+    script(src="./js/scripts-dist.js") 

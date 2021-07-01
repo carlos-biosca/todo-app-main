@@ -1,0 +1,14 @@
+.dragging {
+  background-color: hsl(280, 87%, 65%);
+}
+
+.dragging-info {
+  margin-top: 100px;
+  text-align: center;
+  color: var(--completed-todo);
+  font-size: 0.8rem;
+
+  @include desktop {
+    margin-top: 44px;
+  }
+}

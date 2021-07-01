@@ -1,0 +1,33 @@
+:root {
+  //PRIMARY
+  --light-blue: hsl(220, 98%, 61%);
+  --gradient: linear-gradient(
+    130deg,
+    hsl(192, 100%, 67%),
+    hsl(280, 87%, 65%) 90%
+  );
+
+  //LIGHT
+  --VeryLightGray: hsl(0, 0%, 98%);
+  --background-light: hsl(236, 33%, 92%);
+  --LightGrayishBlue: hsl(233, 11%, 84%);
+  --DarkGrayishBlue: hsl(236, 9%, 61%);
+  --VeryDarkGrayishBlueLight: hsl(235, 19%, 35%);
+
+  //DARK
+  --background: hsl(235, 21%, 11%);
+  --todo-background: hsl(235, 24%, 19%);
+  --on-background: #767992;
+  --completed-todo: hsl(233, 14%, 35%);
+  --uncompleted-todo: hsl(234, 39%, 85%);
+  --on-panel-background: hsl(235, 16%, 43%);
+  --border: hsl(237, 14%, 26%);
+  --delete-todo: hsl(235, 19%, 35%);
+  --LightGrayishBlueHover: hsl(236, 33%, 92%);
+
+  //IMAGES
+  --background-mobile-dark: url("../assets/images/bg-mobile-dark.jpg");
+  --background-desktop-dark: url("../assets/images/bg-desktop-dark.jpg");
+  --background-mobile-light: url("../assets/images/bg-mobile-light.jpg");
+  --background-desktop-light: url("../assets/images/bg-desktop-light.jpg");
+}

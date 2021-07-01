@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 48px 24px 0;
+  height: 200px;
+  background-image: var(--background-mobile-dark);
+  background-repeat: no-repeat;
+  background-size: cover;
+  letter-spacing: 10px;
+
+  & .title {
+    margin-top: 0;
+  }
+
+  @include desktop {
+    justify-content: center;
+    background-image: var(--background-desktop-dark);
+    height: 300px;
+
+    & img,
+    .title {
+      margin-top: 30px;
+    }
+
+    & .title {
+      margin-right: 380px;
+    }
+  }
+}
